@@ -17,13 +17,17 @@
   [style.--tan]="Math.tan(Math.PI / list?.length)"
   #container
   id="2d"
+  [style.transform]="transformStyle"
 >
   <a style="--i: 1" *ngFor="let e of list; let i = index" [style.--i]="i + 1">
     {{ e }}
   </a>
 </div>
-
-<button (click)="changeView(container)">changeView</button>
+<div class="buttons">
+  <button (click)="prev2d(container)"><<</button>
+  <button (click)="changeView(container)">changeView</button>
+  <button (click)="next2d(container)">>></button>
+</div>
 
 <div class="alphabetContainer" id="3d">
   <div class="apphabetsContainer">
@@ -32,7 +36,8 @@
     </div>
   </div>
 </div>
-
-<button (click)="changeOrientation()" style="margin-bottom: 100px">
-  ChangeOrientation
-</button>
+<div class="buttons" style="margin-bottom: 100px">
+  <button (click)="prev()"><<</button>
+  <button (click)="changeOrientation()">ChangeOrientation</button>
+  <button (click)="next()">>></button>
+</div>

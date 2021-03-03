@@ -98,11 +98,13 @@
        background: silver;
        margin-top: 60px !important;
        margin: 0 auto;
-       animation: rotateCicle 4s linear infinite;
+       transition-property: transform;
+       transition-duration: 500ms;
+      //  animation: rotateCicle 4s linear infinite;
        perspective:500px;
        transform-style:preserve-3d;
        &.three-d{
-       animation: rotateCicle3d 4s linear infinite;
+      //  animation: rotateCicle3d 4s linear infinite;
         a{
            border: 2px solid black;
            background: hsla(320, 100%, 50%, 0.8);
@@ -209,7 +211,19 @@ body {
 
 button{
       display: block;
-      margin-top: 40px !important;
-      margin: 0 auto;
       z-index: 2;
+      margin: 0 12px;
+      cursor: pointer;
+      padding: 0.8em 1em;
+      background-color: lightskyblue;
+      outline: none;
+      border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  margin-top: 40px;
 }
